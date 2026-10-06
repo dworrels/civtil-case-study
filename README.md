@@ -1,10 +1,25 @@
-# Civtil
+<p align="center">
+  <a href="https://civtil.com">
+    <img
+      src="https://civtil.com/logo.svg"
+      alt="Civtil"
+      width="220"
+    />
+  </a>
+</p>
 
-**Local development intelligence from public building records.**
+<p align="center">
+  <strong>Local development intelligence from public building records.</strong>
+</p>
 
-Civtil transforms fragmented municipal permitting data into searchable, easy-to-understand information about what is being built in local communities.
-
-[Visit Civtil](https://civtil.com)
+<p align="center">
+  <a href="https://civtil.com">
+    <img
+      src="https://img.shields.io/badge/-Visit%20Civtil-0F4C81?style=for-the-badge"
+      alt="Visit Civtil"
+    />
+  </a>
+</p>
 
 ---
 

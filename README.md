@@ -61,38 +61,23 @@ Users can search development activity, filter records, view project information,
 Civtil uses a layered architecture that separates public-record ingestion, data processing, and the user-facing application.
 
 ```mermaid
-flowchart TB
+flowchart LR
+    A["Public Data<br/>Sources"]:::external
+    B["Data<br/>Collection"]:::processing
+    C["Normalization<br/>& Enrichment"]:::processing
+    D["AI-Assisted<br/>Classification"]:::processing
+    E["Application<br/>Database"]:::platform
+    F["Public<br/>API"]:::platform
+    G["Next.js<br/>Application"]:::application
+    H["Civtil.com"]:::brand
 
-    subgraph ROW1[" "]
-        direction LR
-        A["Public Data<br/>Sources"]:::external
-        B["Data<br/>Collection"]:::processing
-        C["Normalization<br/>& Enrichment"]:::processing
-        D["AI-Assisted<br/>Classification"]:::processing
-
-        A --> B --> C --> D
-    end
-
-    subgraph ROW2[" "]
-        direction LR
-        E["Application<br/>Database"]:::platform
-        F["Public<br/>API"]:::platform
-        G["Next.js<br/>Application"]:::application
-        H["Civtil.com"]:::brand
-
-        E --> F --> G --> H
-    end
-
-    D --> E
+    A --> B --> C --> D --> E --> F --> G --> H
 
     classDef external fill:#F8FAFC,stroke:#CBD5E1,color:#0F172A,stroke-width:1.5px;
     classDef processing fill:#EFF6FF,stroke:#0F4C81,color:#0F172A,stroke-width:1.5px;
     classDef platform fill:#DBEAFE,stroke:#0F4C81,color:#0F172A,stroke-width:1.5px;
     classDef application fill:#FFFFFF,stroke:#0F4C81,color:#0F4C81,stroke-width:2px;
     classDef brand fill:#0F4C81,stroke:#0F4C81,color:#FFFFFF,stroke-width:2px;
-
-    style ROW1 fill:none,stroke:none
-    style ROW2 fill:none,stroke:none
 
     linkStyle default stroke:#94A3B8,stroke-width:1.5px;
 ```
